@@ -1,0 +1,194 @@
+@charset 'utf-8';
+
+html{
+	height:100%;
+}
+
+li{
+	list-style:none;
+}
+
+body{
+	width:100%;
+	height:100%;
+	overflow:hidden;
+	perspective:800px; /*景深*/
+}
+
+#wrap{
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background:radial-gradient(#212121,#000000);
+	overflow:hidden;
+}
+
+#main{
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform-style:preserve-3d; /* 变换风格：3D */
+	transform:translateZ(-2000px) rotateX(0deg) rotateY(0deg);
+}
+
+#main li{
+	width:145px;
+	height:160px;
+	background:linear-gradient(deepskyblue,hotpink);
+	opacity: 0.8;
+	border:1px solid #FF69B4;
+	box-shadow:0 0 12px #FF6A6A;
+	cursor:pointer;
+	position:absolute;
+	top:-80px;
+	left:-60px;
+	transform:translateZ(0px);
+	transition:4s ease-in-out;
+	/*transform:translate(0px,0px); transform变换  translate变换里面的一种-位移 第一个值是水平偏移 第二个值是垂直偏移*/
+	font-family:'Microsoft yahei';
+	text-align:center;
+}
+#main li .title{
+	font-size:60px;
+	color:rgba(255,255,255,0.7);
+	margin-top:10px;
+	font-weight:bold;
+	text-shadow:0 0 20px rgba(255,182,193,0.5);
+}
+#main li .author,#main li .time{
+	font-size:60px;
+	margin-top:10px;
+	font-weight:bold;
+	text-shadow:0 0 20px rgba(	135,206,235,0.5);
+	color:rgba(255,0,0,0.75);
+	font-size:14px;
+	text-shadow:0 0 5px rgba(135,206,235,0.5);
+}
+
+
+#styleBtn{
+	width:290px;
+	height:40px;
+	margin-left:50% ;
+	position:absolute;
+	bottom:15px;
+	left:-145px;
+	transform:scale(1.5);
+	opacity:0;
+	transition:1.5s;
+
+}
+
+#styleBtn li{
+	color:rgba(255,0,0,0.9);
+	border:1px solid rgba(255,69,0,0.75);
+	font-size:18px;
+	font-weight:bold;
+	font-family:'Microsoft yahei';
+	padding:8px 12px;
+	float:left;
+	cursor:pointer;
+	border-radius:3px;
+	margin:0 5px;
+}
+
+#styleBtn li:hover{
+	background:rgba(255,192,203,0.5);
+}
+
+#styleBtn li:active{
+	color:#000;
+}
+
+#back{
+	color:rgba(127,255,255,0.75);
+	border:1px solid rgba(127,255,255,0.75);
+	font-size:12px;
+	font-weight:bold;
+	font-family:'Microsoft yahei';
+	padding:8px 12px;
+	margin:0 5px;
+	cursor:pointer;
+	border-radius:3px;
+	position:absolute;
+	bottom:15px;
+	left:15px;
+}
+#back:hover{
+	background:rgba(0,255,255,0.5);
+}
+
+#back:active{
+	color:#000;
+}
+
+#show{
+	width:80%;
+	height:90%;
+	position:absolute;
+	top:2%;
+	left:10%;
+	background:rgba(192, 235, 255, 0.555);
+	border:1px solid rgba(255,105,180,0.25);
+	box-shadow:0 0 12px rgba(255,105,180,0.5);
+	border-radius:3px;
+	transform:rotateY(0deg) scale(1.5);
+	display:none;
+	transition:transform 1s;
+	font-family:'Microsoft yahei';
+}
+#show .s-title,#show .s-img,#show .s-author,#show .s-dec{
+	background:rgba(0,0,0,0.5);
+	border-radius:3px;
+	border:1px solid rgba(255,105,180,0.25);
+	box-shadow:0 0 12px rgba(255,105,180,0.5);
+}
+#show .s-title{
+	width:50%;
+	margin:3% auto 6%;
+	height:10%;
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+#show .s-img{
+	width:45%;
+	height:40%;
+	margin-left:5%;
+	float:left;
+	text-align: center;
+	padding-top:150px ;
+	font-size: 20px;
+	color: white;
+}
+
+#show .s-author{
+	width:30%;
+	height:5%;
+	float:right;
+	margin-right:5%;
+	margin-top:0%;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
+#show .s-dec{
+	width:30%;
+	height:49%;
+	float:right;
+	margin-right:5%;
+	margin-top:1%;
+	font-size: 15px;
+	color: white;
+	text-align: center;
+	
+}
+
+
+
